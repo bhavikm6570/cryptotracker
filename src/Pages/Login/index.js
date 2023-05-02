@@ -17,7 +17,7 @@ export default function Login() {
 
   const handleClick = () => {
     axios
-      .post("https://ff17-2405-201-200d-1c68-6887-c6e4-cfb-fa60.ngrok-free.app/api/v1/user/login", inputValue)
+      .post("http://localhost:8000/api/v1/user/login", inputValue)
       .then((res) => {
         if (res?.data?.success === true) {
           localStorage.setItem("token", JSON.stringify(res?.data?.payload.token));
