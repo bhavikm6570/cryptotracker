@@ -1,13 +1,13 @@
-import React from 'react'
-import Banner from '../components/Banner/Banner'
-import CoinsTable from '../components/CoinsTable'
+import React from "react";
+import Banner from "../components/Banner/Banner";
+import CoinsTable from "../components/CoinsTable";
 function Homepage() {
   return (
     <>
       <Banner />
-      <CoinsTable/>
+      <CoinsTable />
     </>
-  )
+  );
 }
 
-export default Homepage
+export default Homepage;
