@@ -1,0 +1,105 @@
+{
+  "HTTP_CODES": {
+    "BAD_REQUEST": 400,
+    "DUPLICATE_VALUE": 409,
+    "FORBIDDEN": 403,
+    "INTERNAL_SERVER_ERROR": 500,
+    "METHOD_NOT_ALLOWED": 405,
+    "MOVED_PERMANENTLY": 301,
+    "NOT_ACCEPTABLE": 406,
+    "NOT_FOUND": 404,
+    "NO_CONTENT_FOUND": 204,
+    "OK": 200,
+    "PERMANENT_REDIRECT": 308,
+    "UNAUTHORIZED": 401,
+    "UPGRADE_REQUIRED": 426,
+    "VALIDATION_ERROR": 422
+  },
+  "USER_STATUS": {
+    "ACTIVE": "active",
+    "BLOCKED": "blocked",
+    "DISABLED": "disabled",
+    "INACTIVE": "inactive",
+    "INVITED": "invited",
+    "PENDING": "pending"
+  },
+  "USER_TYPE": {
+    "USER": "user",
+    "ADMIN": "admin",
+    "VENDOR": "vendor"
+  },
+  "CHAT_TYPE": {
+    "TEXT": "text",
+    "IMAGE": "image"
+  },
+  "PAYMENT_STATUS": {
+    "PENDING": "pending",
+    "PAID": "paid",
+    "FAILED": "failed"
+  },
+  "ACCOUNT_TYPE": {
+    "PRIVATE": "private",
+    "PUBLIC": "public"
+  },
+  "CONTACT_TYPE": {
+    "VIDEO": "video",
+    "AUDIO": "audio",
+    "TEXT": "text",
+    "IMAGE": "image",
+    "DOC": "doc",
+    "LOCATION": "location"
+  },
+  "LIKE_TYPE": {
+    "POST": "post",
+    "STORY": "story",
+    "COMMENT": "comment",
+    "PRODUCT": "product"
+  },
+  "COMMENT_TYPE": {
+    "POST": "post",
+    "PRODUCT": "product"
+  },
+  "GENDER": {
+    "MALE": "male",
+    "FEMALE": "female",
+    "OTHER": "other"
+  },
+  "FOLLOWER_STATUS": {
+    "REQUESTED": "requested",
+    "ACCEPTED": "accepted",
+    "REJECTED": "rejected"
+  },
+  "STATUS_FOR_FOLLOWERS": {
+    "VISITOR": "visitorStatus",
+    "SELF": "selfStatus"
+  },
+  "FOLLOW_TYPE": {
+    "FOLLOWER": "follower",
+    "FOLLOWING": "following",
+    "FOLLOWER_REQUEST": "follower_request",
+    "FOLLOWING_REQUEST": "following_request",
+    "MUTUAL_FOLLOWER": "mutual_follower"
+  },
+  "POST_TYPE": {
+    "TEXT": "text",
+    "IMAGE": "image",
+    "VIDEO": "video",
+    "AUDIO": "audio",
+    "DOC": "doc",
+    "LOCATION": "location"
+  },
+  "POST_STATUS": {
+    "ACTIVE": "active",
+    "INACTIVE": "inactive",
+    "DELETED": "deleted",
+    "BLOCKED": "blocked",
+    "PENDING": "pending",
+    "DRAFT": "draft",
+    "REJECTED": "rejected"
+  },
+  "VIDEO_STATUS": {
+    "PENDING": "pending",
+    "ACCEPTED": "accepted",
+    "REQUESTED": "requested"
+  }
+}
