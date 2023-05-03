@@ -2,9 +2,10 @@ const mongoose = require("mongoose");
 const debugDb = require("debug")("db");
 
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect("mongodb://localhost:27017/crypto")
   .then(() => {
-    debugDb("🎯 connected");
+    console.log("🎯 connected");
+    // debugDb("🎯 connected");
   })
   .catch((err) => {
     debugDb(err);

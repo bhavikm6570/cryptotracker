@@ -1,7 +1,7 @@
 import { AppBar, Container, MenuItem, Select, Toolbar, Typography, FormControl, createTheme, ThemeProvider } from '@mui/material'
 import { makeStyles } from 'tss-react/mui';
 import { useHistory } from 'react-router-use-history'
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { CryptoState } from '../CryptoContext';
 
 const useStyles = makeStyles()(() =>({
@@ -15,7 +15,7 @@ const useStyles = makeStyles()(() =>({
 }))
 
 const Header = () => {
-
+const [showLogoutButton, setShowLogoutButton] = useState(false)
     const { classes } = useStyles()
 
     const history = useHistory();
@@ -23,7 +23,10 @@ const Header = () => {
     const { currency, setCurrency } = CryptoState();
 
     console.log(currency)
-
+useEffect(() => {
+const token = localStorage.getItem("token")
+if(token) setShowLogoutButton(true)
+},[])
     const darkTheme = createTheme({
         palette: {
             primary: {
@@ -32,6 +35,11 @@ const Header = () => {
             type: "dark",
         }
     })
+    const logout = () => {
+    console.log("LOgout....")
+    localStorage.removeItem("token");
+    history.push("/");
+    }
 return (
  <ThemeProvider theme={darkTheme}>
     <AppBar color='transparent' position='static'>
@@ -44,9 +52,19 @@ return (
                 >
                     Crypto Tracker
                 </Typography>
+                {/* Code For Logout Button */}
+                <div>
+                {
+                    showLogoutButton && <button style={{background: "gold",margin: "10px",padding: "10px", borderRadius:"#fff"}} onClick={() => logout()}>
+                    Logout
+                    </button>
+                    
+                }
+    
+                </div>
 
             <FormControl>
-                <Select
+            <Select
                   variant='outlined'
                   style={{
                     width: 100,
